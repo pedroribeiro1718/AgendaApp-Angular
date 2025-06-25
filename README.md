@@ -3,6 +3,8 @@
 
 A project developed using Angular 19 with modern front-end development practices. This application simulates a contact agenda, consuming a fake API powered by JSON Server.
 
+The contents of this README.md file have been generated with ChatGPT.
+
 ## ✨ Technologies and Features
 
 - [Angular 19](https://angular.io/) (`@angular/cli`)
