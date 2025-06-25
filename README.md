@@ -1,59 +1,91 @@
-# AgendaApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+# AgendaApp-Angular
 
-## Development server
+A project developed using Angular 19 with modern front-end development practices. This application simulates a contact agenda, consuming a fake API powered by JSON Server.
 
-To start a local development server, run:
+## ✨ Technologies and Features
+
+- [Angular 19](https://angular.io/) (`@angular/cli`)
+- [JSON Server](https://github.com/typicode/json-server) (Fake API for testing)
+- Component-based architecture and navigation using [Angular Router](https://angular.io/guide/router)
+- API consumption with [HttpClient](https://angular.io/guide/http) (Services and Models)
+- Reactive Forms ([Reactive Forms](https://angular.io/guide/reactive-forms))
+- Modular organization with Lazy Loading (`admin` and `login` modules)
+- Environment management with [environments](https://angular.io/guide/build#configuring-application-environments)
+- [Bootstrap](https://getbootstrap.com/) styled with the [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) theme
+
+## 🚀 Getting Started
+
+### 1️⃣ Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+
+Install Angular CLI (if not already installed):
+
+```bash
+npm install -g @angular/cli
+```
+
+### 2️⃣ Install Dependencies
+
+Clone this repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/AgendaApp-Angular.git
+cd AgendaApp-Angular
+npm install
+```
+
+### 3️⃣ Configure the Fake API (JSON Server)
+
+Install JSON Server globally (if needed):
+
+```bash
+npm install -g json-server
+```
+
+Run the fake API:
+
+```bash
+json-server db.json --port 3000
+```
+
+Make sure the `db.json` file is located in the root folder.
+
+### 4️⃣ Run the Angular Application
+
+Start the project:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Access it at: [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+## 🗺️ Module Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `app/modules/login` → Authentication module
+- `app/modules/admin` → Protected module loaded via Lazy Loading with the main features of the agenda
 
-```bash
-ng generate component component-name
+## 🔧 Environments
+
+Configure the API URLs and other variables in:
+
+```
+src/environments/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- `environment.ts` → Development environment
+- `environment.prod.ts` → Production environment
 
-```bash
-ng generate --help
-```
+## 🎨 Theme and Layout
 
-## Building
+The project uses the [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) theme integrated with Bootstrap to provide a modern and responsive layout.
 
-To build the project run:
+## 📚 Useful Documentation
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular Documentation](https://angular.io/docs)
+- [JSON Server](https://github.com/typicode/json-server)
+- [Bootstrap](https://getbootstrap.com/)
+- [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2)

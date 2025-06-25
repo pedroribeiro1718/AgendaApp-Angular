@@ -1,0 +1,7 @@
+<div *ngIf="mensagens.length > 0" class="alert alert-{{ tipo }} alert-dismissible fade show" role="alert">
+    <strong>{{ titulo }}</strong>
+    <ul class="mt-2 mb-0">
+        <li *ngFor="let msg of mensagens">{{ msg }}</li>
+    </ul>
+    <button type="button" class="btn-close" aria-label="Close" (click)="fecharMensagens()"></button>
+</div>

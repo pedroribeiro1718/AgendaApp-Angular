@@ -23,13 +23,22 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public"                
+              },
+              "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/sbadmin2/vendor/fontawesome-free/css/all.min.css",
+              "src/assets/sbadmin2/css/sb-admin-2.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/sbadmin2/vendor/jquery-easing/jquery.easing.min.js",
+              "src/assets/sbadmin2/js/sb-admin-2.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -50,7 +59,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -92,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "712d776a-c17a-43ea-8dad-fc17e881a9e6"
   }
 }
